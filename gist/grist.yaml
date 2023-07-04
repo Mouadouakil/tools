@@ -6,6 +6,7 @@ metadata:
   labels:
     io.kompose.service: grist
   name: grist
+  namespace: grist
 spec:
   ports:
     - name: "8484"
@@ -24,6 +25,7 @@ metadata:
   labels:
     io.kompose.service: grist
   name: grist
+  namespace: grist
 spec:
   replicas: 1
   selector:
@@ -52,6 +54,7 @@ kind: NetworkPolicy
 metadata:
   creationTimestamp: null
   name: grist-default
+  namespace: grist
 spec:
   ingress:
     - from:
