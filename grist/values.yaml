@@ -62,17 +62,17 @@ service:
 
 persistence:
   persist:
-    enabled: true
+    enabled: false
     mountPath: "/persist"
 
 postgresql:
-  enabled: true
+  enabled: false
   existingSecret: dbcreds
   postgresqlUsername: grist
   postgresqlDatabase: grist
 
 redis:
-  enabled: true
+  enabled: false
   existingSecret: rediscreds
 
 portal:
