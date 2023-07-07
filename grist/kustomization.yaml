@@ -3,3 +3,9 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - grist.yaml
+configMapGenerator:
+  - name: grist-values
+    files:
+      - values.yaml=values.yaml
+configurations:
+  - kustomizeconfig.yaml

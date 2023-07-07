@@ -87,7 +87,7 @@ spec:
                   key: POSTGRES_USER
                   name: env
           image: postgres
-          name: database
+          name: postgres
           ports:
             - containerPort: 5432
           resources: {}
@@ -109,6 +109,7 @@ data:
   POSTGRES_DB: calendso
   POSTGRES_PASSWORD: magical_password
   POSTGRES_USER: unicorn_user
+  NEXTAUTH_SECRET: jKGKHQYBdyI+CjoWLPIFSLUAYEu+WIOtziSvHX/R3JA=
 kind: ConfigMap
 metadata:
   creationTimestamp: null
@@ -201,7 +202,7 @@ spec:
                 configMapKeyRef:
                   key: POSTGRES_USER
                   name: env
-          image: clovyr/formbricks
+          image: mouadeouakil/formbricks
           name: formbricks
           ports:
             - containerPort: 3000
